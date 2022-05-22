@@ -9,7 +9,8 @@ function CustomLink({ children, to, ...props }) {
       <Link
         style={{
           color: match ? 'black' : 'gray',
-          margin: "0px", borderBottom: match && '3px solid #0277BD' ,
+          background: match &&  "rgb(236, 235, 235)",
+          margin: "0px", borderBottom: match && '3px solid #208754' ,
           borderRadius:'2px'
         }}
         className={match ? "underline" : "none"}

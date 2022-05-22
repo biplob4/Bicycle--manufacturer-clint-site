@@ -1,39 +1,26 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import logo from '../../image/logo.png';
-import CustomLink from '../Shared/CustomLink';
-import './Home.css'
+import Button from './Button';
+import logo from '../../image/logo1.png';
+import Description from './Description';
 
 const Home = () => {
     return (
-        <div>
-            <div>
-                <Navbar className='navber py-0 shadow-sm' collapseOnSelect expand="lg">
-                    <Container>
-                        <Navbar.Brand className='nav-brand' as={Link} to='/home'><h5 className='m-0'><strong className='ms-0'>Bicycel</strong>Parts</h5></Navbar.Brand>
-                        {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
-                        {/* <img src={logo} alt="" srcset="" /> */}
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="ms-auto menuitem">
-                                <CustomLink className="nav-item nav-link mx-2 py-2" to="/home">Home</CustomLink>
-                                <CustomLink className="nav-item nav-link mx-2 py-2 " to="/blogs">Blogs</CustomLink>
-                                <CustomLink className="nav-item nav-link mx-2 py-2 " to="/addItem">Add Item</CustomLink>
-                                <CustomLink className="nav-item nav-link mx-2 py-2  " to="/manageInventorys">Manage Inventory</CustomLink>
-                                <CustomLink className="nav-item nav-link mx-2 py-2 " to="/myItem">My Item</CustomLink>
-                            </Nav>
-
-                            <Nav className="ms-auto">
-                                <Button className="mb-1" to="/login">SignIn</Button>
-                            </Nav>
-
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
+        <div className="">
+            <div className="header">
+                <img src={logo} className='display-md-none' alt="" srcset="" />
+                <div class="hero min-h-screen bg-base-200 p-3">
+                    <div class="hero-content text-start">
+                        <div class="max-w-md">
+                            <h2 class="text-5xl text-bold">Let's do business together and develop <br /> our own business,,</h2>
+                            <p class="py-6 font-bold">Hello,, welcome to our company.All kinds of bicycle tools are available here. You can get the tools <br />you need from here</p>
+                            <Button>
+                                Get Start Now
+                            </Button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <button class="btn btn-ghost">Button</button>    
+            <Description/>
         </div>
     );
 };

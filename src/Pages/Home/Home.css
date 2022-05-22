@@ -1,4 +1,57 @@
-.menuitem :hover{
+.menuitem :hover {
     background: rgb(236, 235, 235);
     color: red;
+}
+
+.header {
+    height: 100vh;
+    color: #fff;
+    width: 100%;
+    background-size : cover;
+    background-attachment: fixed;
+    background-image: linear-gradient(0deg,rgba(0,0,0,.5) 50%,rgba(0,0,0,.5) 50%),url(../../image/cyclist.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img{
+    position: absolute;
+    top: 60px;
+    right: 8%;
+}
+.header h2{
+    font-family: Arial black;
+}
+.header p{
+    font-size: 19px;
+    color: rgb(229, 226, 226);
+}
+@media screen and (max-width:1000px) {
+    .header img{
+        display: none;
+    }
+}
+.discription{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discription h1 {
+    font-family: Arial black;
+    position: relative;
+}
+.discription h1::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 35px;
+   background-color: #198754e7;
+   bottom: 79%;
+   border-bottom-left-radius: 50%;
+   border-top-right-radius: 50%;
+}
+.discription h5 {
+    color: rgb(71, 70, 70);
 }
