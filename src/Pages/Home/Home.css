@@ -4,6 +4,9 @@
 }
 
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     color: #fff;
     width: 100%;
@@ -12,16 +15,13 @@
     background-image: linear-gradient(0deg,rgba(0,0,0,.5) 50%,rgba(0,0,0,.5) 50%),url(../../image/cyclist.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .header img{
     position: absolute;
     top: 60px;
     right: 8%;
 }
-.header h2{
+.header h1{
     font-family: Arial black;
 }
 .header p{
@@ -37,21 +37,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    text-align: center;
 }
-.discription h1 {
+.discription h2 {
     font-family: Arial black;
     position: relative;
 }
-.discription h1::before {
+.tolse h2 {
+    font-family: Arial black;
+    position: relative;
+    margin-top: 100px;
+}
+.discription h2::before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 35px;
+    background-color: #198754e7;
+    bottom: 82%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+ }
+.tolse h2::before {
    content: "";
    position: absolute;
-   height: 100%;
+   height: 90%;
    width: 35px;
    background-color: #198754e7;
    bottom: 79%;
    border-bottom-left-radius: 50%;
    border-top-right-radius: 50%;
 }
-.discription h5 {
-    color: rgb(71, 70, 70);
+.discription-container h5 {
+    color: rgb(100, 99, 99);
+    font-size: 20px;
+    font-weight: 500;
+}
+.start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+.drow{
+    position: absolute;
+    bottom: -3.5%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    z-index: 2;
 }

@@ -2,17 +2,18 @@ import React from 'react';
 import Button from './Button';
 import logo from '../../image/logo1.png';
 import Description from './Description';
+import Tolse from './Tolse';
 
 const Home = () => {
     return (
         <div className="">
-            <div className="header">
+            <div className="header mb-5">
                 <img src={logo} className='display-md-none' alt="" srcset="" />
-                <div class="hero min-h-screen bg-base-200 p-3">
-                    <div class="hero-content text-start">
-                        <div class="max-w-md">
-                            <h2 class="text-5xl text-bold">Let's do business together and develop <br /> our own business,,</h2>
-                            <p class="py-6 font-bold">Hello,, welcome to our company.All kinds of bicycle tools are available here. You can get the tools <br />you need from here</p>
+                <div class="p-3">
+                    <div class="text-start">
+                        <div class="">
+                            <h1 class="text-bold">Let's do business together and develop <br /> our own business,,</h1>
+                            <p class="py-2 font-bold">Hello,, welcome to our company.All kinds of bicycle tools are available here. You can get the tools <br />you need from here</p>
                             <Button>
                                 Get Start Now
                             </Button>
@@ -21,6 +22,7 @@ const Home = () => {
                 </div>
             </div>
             <Description/>
+            <Tolse/>
         </div>
     );
 };
