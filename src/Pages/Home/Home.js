@@ -3,6 +3,7 @@ import Button from './Button';
 import logo from '../../image/logo1.png';
 import Description from './Description';
 import Tolse from './Tolse';
+import Contuct from './Contuct';
 
 const Home = () => {
     return (
@@ -23,6 +24,7 @@ const Home = () => {
             </div>
             <Description/>
             <Tolse/>
+            <Contuct/>
         </div>
     );
 };
