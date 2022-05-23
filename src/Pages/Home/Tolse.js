@@ -26,7 +26,7 @@ const Tolse = () => {
             <div className="sengleTolse container py-5">
                 {
                     parts.map(tolse =>
-                        <div className='tolse'>
+                        <div key={tolse._id} className='tolse'>
                             <h4 className="text-center py-2">{tolse.name}</h4>
                             <div className="singeletolseImg"><img src={tolse.image} alt="img" /></div>
                             <p title={tolse.description}>{tolse.description.length > 100 ? tolse.description.slice(0, 100) + "...." : tolse.description}</p>

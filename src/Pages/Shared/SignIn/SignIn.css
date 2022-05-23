@@ -1,0 +1,49 @@
+.login-from{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-from form{
+    width: 390px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    padding: 0 20px;
+}
+.login-from input{
+   width: 100%;
+   padding: 12px 10px;
+   padding-left: 10%;
+   margin: 7px 0;
+   outline: none;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+   border-bottom: 1px solid rgb(197, 194, 194);
+}
+.login-from svg{
+   position: absolute;
+   top: 35%;
+   left: 3%;
+}
+.login-from div{
+   position: relative;
+}
+.login-from-btn{
+    color: #fff;
+    margin: 0 auto;
+    background: #198754da;
+}
+@media screen and (max-width:770px) {
+    .login-from form{
+        width: 96%;
+        margin: 0 auto;
+    }
+    .login-from{
+        height: 100%;
+    }
+
+}
