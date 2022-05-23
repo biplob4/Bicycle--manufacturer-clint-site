@@ -62,7 +62,9 @@ const Description = () => {
                         <div className="p-4">
                             <h2>Get start wite us,,</h2>
                             <h6 className="mb-4">We pray that your business will improve a lot.</h6>
-                            <button className='btn btn-warning'>Contuct us</button>
+                            <a href="#contuctContainer">
+                                <button className='btn btn-warning'>Contuct us</button>
+                            </a>
                             <svg className='drow' viewBox="0 0 1695 68">
                                 <path d="M0 23c135.4 19 289.6 28.5 462.5 28.5C721.9 51.5 936.7 1 1212.2 1 1395.8.9 1556.7 8.3 1695 23v34H0V23z" fill="#ffff" ></path>
                             </svg>

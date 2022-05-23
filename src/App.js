@@ -3,6 +3,7 @@ import Home from './Pages/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Blogs from './Pages/Blogs/Blogs';
 import Purchase from './Purchase/Purchase';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/purchase/:id' element={<Purchase />}></Route>
       </Routes>
+      <ToastContainer/>
     </div>
   );
 }

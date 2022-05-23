@@ -15,16 +15,16 @@ const Home = () => {
                         <div class="">
                             <h1 class="text-bold">Let's do business together and develop <br /> our own business,,</h1>
                             <p class="py-2 font-bold">Hello,, welcome to our company.All kinds of bicycle tools are available here. You can get the tools <br />you need from here</p>
-                            <Button>
-                                Get Start Now
-                            </Button>
+                            <a style={{textDecoration:"none"}} href="#tolse">
+                                <Button> Get Start Now</Button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <Description/>
-            <Tolse/>
-            <Contuct/>
+            <Description />
+            <Tolse />
+            <Contuct />
         </div>
     );
 };

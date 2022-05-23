@@ -3,7 +3,7 @@
     color: red;
 }
 
-.header {
+.header,.contuctContainer {
     display: flex;
     justify-content: center;
     align-items: center;
