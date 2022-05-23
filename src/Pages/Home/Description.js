@@ -58,7 +58,7 @@ const Description = () => {
             </Row>
             <div className="">
                 <div style={{ height: "45vh" }} className="bg-success start">
-                    <div className="">
+                    <div className="" id='description'>
                         <div className="p-4">
                             <h2>Get start wite us,,</h2>
                             <h6 className="mb-4">We pray that your business will improve a lot.</h6>

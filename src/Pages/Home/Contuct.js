@@ -12,7 +12,7 @@ const Contuct = () => {
         e.target.reset();
     }
     return (
-        <div className="contuctContainer my-5" id='contuctContainer'>
+        <div className="contuctContainer mt-5" id='contuctContainer'>
             <div className='container' id='contuct'>
                 <h1 className='pt-3 mb-4 mx-auto'>Contuct us</h1>
                 <form onSubmit={handeleSubmit}>

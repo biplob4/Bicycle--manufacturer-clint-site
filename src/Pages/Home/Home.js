@@ -4,11 +4,12 @@ import logo from '../../image/logo1.png';
 import Description from './Description';
 import Tolse from './Tolse';
 import Contuct from './Contuct';
+import Footer from '../Shared/Footer';
 
 const Home = () => {
     return (
         <div className="">
-            <div className="header mb-5">
+            <div className="header mb-5" id='home'>
                 <img src={logo} className='display-md-none' alt="" srcset="" />
                 <div class="p-3">
                     <div class="text-start">
@@ -25,6 +26,7 @@ const Home = () => {
             <Description />
             <Tolse />
             <Contuct />
+            <Footer/>
         </div>
     );
 };
