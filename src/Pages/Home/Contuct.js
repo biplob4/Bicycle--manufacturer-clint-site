@@ -14,7 +14,7 @@ const Contuct = () => {
     return (
         <div className="contuctContainer mt-5" id='contuctContainer'>
             <div className='container' id='contuct'>
-                <h1 className='pt-3 mb-4 mx-auto'>Contuct us</h1>
+                <h1 className='pt-3 mb-4 mx-auto text-light'>Contuct us</h1>
                 <form onSubmit={handeleSubmit}>
                     <div className="group-input">
                         <div className="w-100">

@@ -4,6 +4,7 @@ import logo from '../../image/logo1.png';
 import Description from './Description';
 import Tolse from './Tolse';
 import Contuct from './Contuct';
+import Reviews from './reviews/Reviews';
 
 const Home = () => {
     return (
@@ -24,6 +25,7 @@ const Home = () => {
             </div>
             <Description />
             <Tolse />
+            <Reviews/>
             <Contuct />
         </div>
     );

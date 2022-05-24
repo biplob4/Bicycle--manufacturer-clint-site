@@ -41,7 +41,6 @@ const SignIn = () => {
         // const agree = event.target.trems.checked; 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        event.reset();
     }
 
     return (

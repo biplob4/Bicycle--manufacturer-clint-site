@@ -41,7 +41,6 @@ const Login = () => {
         password = event.target.password.value;
         // const agree = event.target.trems.checked; 
         await signInWithEmailAndPassword(email, password);
-        event.reset();
     }
     return (
         <div className='login-from py-5'>

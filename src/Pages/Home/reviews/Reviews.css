@@ -1,0 +1,8 @@
+.review-container{
+    margin-top: 70px;
+}
+.allImg img{
+    position: absolute;
+    top: -27px;
+    left: 45%;
+}

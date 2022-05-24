@@ -21,7 +21,7 @@ const Navber = () => {
                             <Nav className="ms-auto menuitem">
                                 <CustomLink className="nav-item nav-link mx-1 px-3" to="/home">Home</CustomLink>
                                 <CustomLink className="nav-item nav-link mx-1 px-3 " to="/blogs">Blogs</CustomLink>
-                                <CustomLink className="nav-item nav-link mx-1 px-3 " to="/addItem">Add Item</CustomLink>
+                                <CustomLink className="nav-item nav-link mx-1 px-3 " to="/dashboard">Dashboard</CustomLink>
                                 <CustomLink className="nav-item nav-link mx-1 px-3  " to="/manageInventorys">Manage Inventory</CustomLink>
                                 <CustomLink className="nav-item nav-link mx-1 px-3 " to="/myItem">My Item</CustomLink>
                             </Nav>

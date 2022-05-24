@@ -1,21 +1,21 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../Shared/Loadding/Loading';
+import Tole from './Tole';
 import './Tolse.css';
 
 const Tolse = () => {
-    const navigate = useNavigate();
     const { data: parts, isLoading } = useQuery('parts', () =>
         fetch('http://localhost:5000/parts').then(res =>
             res.json()
         ))
 
     if (isLoading) {
-        return <p>Loading ....</p>
+        return <Loading/>
     }
-
-    const navegate = id => {
-        navigate(`/purchase/:${id}`)
+    if(!parts){
+        return <h4 className='text-center text-[red]'>Product Not Found</h4>
     }
     return (
         <div>
@@ -25,16 +25,8 @@ const Tolse = () => {
             </div>
             <div className="sengleTolse container py-5">
                 {
-                    parts.map(tolse =>
-                        <div key={tolse._id} className='tolse'>
-                            <h4 className="text-center py-2">{tolse.name}</h4>
-                            <div className="singeletolseImg"><img src={tolse.image} alt="img" /></div>
-                            <p title={tolse.description}>{tolse.description.length > 100 ? tolse.description.slice(0, 100) + "...." : tolse.description}</p>
-                            <h5>${tolse.price}</h5>
-                            <small className='text-gray-500 text-xs'>Avilable<strong>:</strong> <samp className='text-success'>({tolse.avilable})</samp></small> <br />
-                            <small className='text-gray-500 text-xs'>Minimum-Order<strong>:</strong> <samp className='text-success'>({tolse.minimum})</samp></small> <br />
-                            <button onClick={() => navegate(tolse._id)} className='mt-2 tolse-btn d-block mx-auto'>Purchase Now</button>
-                        </div>
+                    parts?.map(tolse =>
+                        <Tole key={tolse._id} tolse={tolse}/>
                     )
                 }
             </div>
