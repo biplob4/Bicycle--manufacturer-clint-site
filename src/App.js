@@ -15,6 +15,7 @@ import RequireAuth from './Pages/Shared/RequireAuth';
 import ManageOrder from './Pages/ManageOrder/ManageOrder';
 import RequireAdmin from './Pages/Shared/RequireAdmin';
 import AddProduct from './Pages/AddProduct/AddProduct';
+import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -34,8 +35,8 @@ function App() {
           <Route path="addReview" element={<AddRevie />}></Route>
           <Route path="manageOrder" element={<RequireAdmin><ManageOrder /></RequireAdmin>}></Route>
           <Route path="addProduct" element={<RequireAdmin><AddProduct /></RequireAdmin>}></Route>
-          {/* <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
-          <Route path="manageProduct" element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
+          <Route path="makeAdmin" element={<RequireAdmin><MakeAdmin /></RequireAdmin>}></Route>
+          {/* <Route path="manageProduct" element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
         </Route>
 
       </Routes>

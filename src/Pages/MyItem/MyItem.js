@@ -66,7 +66,7 @@ const MyItem = () => {
                             <div className='text-orange-500 trnangectionId text-center w-100 mx-auto'>
                             {product.trnangectionId && <span ><span className='text-[gray]'>your trnangection id:</span>  {product.trnangectionId}</span>}
                             </div>
-                            <div className="d-flex align-middle justify-content-between">
+                            <div className="d-flex align-middle justify-content-between orderP">
                                 <p> <b className='cardP'>{product.name}</b></p>
                                 <p className='cardP text-xs me-2'>Quantity: {product.quantity}</p>
                             </div>
@@ -76,7 +76,7 @@ const MyItem = () => {
                                 <div className=" d-flex">
                                     {!product.paid ?
                                         <p onClick={() => navigate(`/payment/${product._id}`)} className='rounded py-1 px-2 text-light bg-success me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faAlipay} /> Pay</p> :
-                                        <p className='rounded py-1 px-3 text-success border paidBtn me-2 text-xs'> Paid</p>
+                                        <p className='rounded py-1 px-5 text-success border paidBtn me-1 text-xs'> Paid</p>
                                     }
                                     {!product.paid && <p onClick={() => handelDelete(product._id)} className='rounded py-1 px-2 text-light bg-danger me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faTrash} /> Delete</p>}
                                 </div>

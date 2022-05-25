@@ -24,7 +24,6 @@ const ReviewTow = ({ reviews }) => {
         )
     }
 
-    let alart;
     return (
         <div className="review-container">
             <div className='mb-5'>
