@@ -10,6 +10,10 @@ import SignIn from './Pages/Shared/SignIn/SignIn';
 import Dashbord from './Pages/Dashbord/Dashbord';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import Paymant from './Pages/Payment/Paymant';
+import AddRevie from './Pages/AddReview/AddRevie';
+import RequireAuth from './Pages/Shared/RequireAuth';
+import ManageOrder from './Pages/ManageOrder/ManageOrder';
+import RequireAdmin from './Pages/Shared/RequireAdmin';
 
 function App() {
   return (
@@ -22,14 +26,13 @@ function App() {
         <Route path='/purchase/:id' element={<Purchase />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path="payment/:id" element={<Paymant />}></Route>
-
         <Route path='/signin' element={<SignIn />}></Route>
 
-        <Route path="dashboard" element={<Dashbord />}>
+        <Route path="dashboard" element={<RequireAuth><Dashbord /></RequireAuth>}>
           <Route index element={<MyOrder />}></Route>
-          {/* <Route path="addreview" element={<MyReview />}></Route>
-          <Route path="history" element={<History />}></Route>
-          <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
+          <Route path="addReview" element={<AddRevie />}></Route>
+          <Route path="manageOrder" element={<RequireAdmin><ManageOrder /></RequireAdmin>}></Route>
+          {/* <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
           <Route path="addProduct" element={<RequireAdmin><AddDoctor /></RequireAdmin>}></Route>
           <Route path="manageProduct" element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
         </Route>

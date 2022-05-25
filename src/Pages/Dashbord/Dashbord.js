@@ -3,26 +3,27 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../Hooks/useAdmin';
+import CustomLink from '../Shared/CustomLink';
 
 const Dashbord = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
     return (
         <div className="dashboard">
-            <div className='pt-5 mt-5 container min-h-[80vh]'>
-                <div class="navbar mx-auto ">
-                    <ul class="menu lg:menu-horizontal p-0 text-start w-100 rounded-xl block border ">
-                        <li><Link style={{ textDecoration: "none" }} className="text-sm text-[gray]" to="/dashboard" aria-checked>My Order</Link></li>
-                        <li><Link style={{ textDecoration: "none" }} className="text-sm text-[gray]" to="/dashboard/review">Add reviews</Link></li>
-                        <li><Link style={{ textDecoration: "none" }} className="text-sm text-[gray]" to="/dashboard/history">My History</Link></li>
+                            <h1 className='text-xl text-success font-bold pb-0 mt-5 pt-3 container'><i>Welcome To your Dashboard</i></h1>
+            <div className='pt-3 container min-h-[90vh]'>
+                <div class="ms-auto w-full">
+                    <ul style={{ borderBottom: '1px solid lightgray' }} class=" menu lg:menu-horizontal p-0 block hover-none ">
+                        <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard" aria-checked>My Order</CustomLink></li>
+                        <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/addReview">Add reviews</CustomLink></li>
+                        <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/Profile">My Profile</CustomLink></li>
                         {admin && <>
-                            <li><Link style={{ textDecoration: "none" }} className="text-sm text-[gray]" to="/dashboard/users">All Users</Link></li>
-                            <li><Link style={{ textDecoration: "none" }} className="text-sm text-[gray]" to="/dashboard/addDoctor">Add a Doctor</Link></li>
-                            <li><Link style={{ textDecoration: "none" }} className="text-sm text-[gray]" to="/dashboard/manageDoctor">Manage Doctor</Link></li>
+                            <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/addProduct">Add Product</CustomLink></li>
+                            <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/manageOrder">Manage All Order</CustomLink></li>
+                            <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/makeAdmin">Make Admin</CustomLink></li>
                         </>}
                     </ul>
                 </div>
-                <h1 className='text-2xl text-success font-bold pt-3 text-center mb-5'><i>Welcome to your Dashboard</i></h1>
                 <Outlet></Outlet>
             </div>
         </div>

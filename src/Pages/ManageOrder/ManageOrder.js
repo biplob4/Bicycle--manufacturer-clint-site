@@ -8,17 +8,16 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import './MyItem.css';
+import '../MyItem/MyItem.css';
 
-const MyItem = () => {
+const ManageOrder = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     const [item, setItem] = useState([]);
     const nevigate = useNavigate();
 
     useEffect(() => {
-        if (user) {
-            fetch(`http://localhost:5000/order?user=${user.email}`, {
+            fetch(`http://localhost:5000/orderAll`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -35,8 +34,7 @@ const MyItem = () => {
                 .then(data => {
                     setItem(data)
                 });
-        }
-    }, [user])
+    }, [setItem])
 
     const handelDelete = id => {
         const url = `http://localhost:5000/order/${id}`;
@@ -61,10 +59,10 @@ const MyItem = () => {
             {
                 item.map(product => (
                     <div key={product._id} className="product align-middle justify-content-between ">
-                            <img className=' w-[80px] rounded mx-auto' src={product.image} alt="images" />
+                        <img className=' w-[80px] rounded mx-auto' src={product.image} alt="images" />
                         <div className="w-100 px-2 mt-1 mx-auto">
                             <div className='text-orange-500 trnangectionId text-center w-100 mx-auto'>
-                            {product.trnangectionId && <span ><span className='text-[gray]'>your trnangection id:</span>  {product.trnangectionId}</span>}
+                                {product.trnangectionId && <span ><span className='text-[gray]'>your trnangection id:</span>  {product.trnangectionId}</span>}
                             </div>
                             <div className="d-flex align-middle justify-content-between">
                                 <p> <b className='cardP'>{product.name}</b></p>
@@ -75,7 +73,7 @@ const MyItem = () => {
                                 <p className='p-0 m-0'>Total price: $<i>{product.quantity * product.price}</i></p>
                                 <div className=" d-flex">
                                     {!product.paid ?
-                                        <p onClick={() => navigate(`/payment/${product._id}`)} className='rounded py-1 px-2 text-light bg-success me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faAlipay} /> Pay</p> :
+                                        <p onClick={() => navigate(`/payment/${product._id}`)} className='rounded py-1 px-2 text-light bg-success me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faAlipay} /> Shipped</p> :
                                         <p className='rounded py-1 px-3 text-success border me-2 text-xs' role="button"> Paid</p>
                                     }
                                     {!product.paid && <p onClick={() => handelDelete(product._id)} className='rounded py-1 px-2 text-light bg-danger me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faTrash} /> Delete</p>}
@@ -89,4 +87,4 @@ const MyItem = () => {
     );
 };
 
-export default MyItem;
+export default ManageOrder;

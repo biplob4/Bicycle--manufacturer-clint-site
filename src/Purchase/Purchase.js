@@ -76,7 +76,7 @@ const Purchase = () => {
                 }
                 navegate('/dashboard')
             })
-
+            event.target.reset();
     }
 
     return (
