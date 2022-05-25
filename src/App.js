@@ -8,6 +8,8 @@ import Footer from './Pages/Shared/Footer';
 import Login from './Pages/Shared/Login/Login';
 import SignIn from './Pages/Shared/SignIn/SignIn';
 import Dashbord from './Pages/Dashbord/Dashbord';
+import MyOrder from './Pages/MyOrder/MyOrder';
+import Paymant from './Pages/Payment/Paymant';
 
 function App() {
   return (
@@ -19,21 +21,22 @@ function App() {
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/purchase/:id' element={<Purchase />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path="payment/:id" element={<Paymant />}></Route>
+
         <Route path='/signin' element={<SignIn />}></Route>
 
         <Route path="dashboard" element={<Dashbord />}>
-          {/* <Route index element={<MyAppoinment />}></Route>
-          <Route path="review" element={<MyReview />}></Route>
+          <Route index element={<MyOrder />}></Route>
+          {/* <Route path="addreview" element={<MyReview />}></Route>
           <Route path="history" element={<History />}></Route>
-          <Route path="payment/:id" element={<Payment />}></Route>
           <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>}></Route>
-          <Route path="addDoctor" element={<RequireAdmin><AddDoctor /></RequireAdmin>}></Route>
-          <Route path="manageDoctor" element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
+          <Route path="addProduct" element={<RequireAdmin><AddDoctor /></RequireAdmin>}></Route>
+          <Route path="manageProduct" element={<RequireAdmin><ManageDoctor /></RequireAdmin>}></Route> */}
         </Route>
 
       </Routes>
-      <Footer/>
-      <ToastContainer/>
+      <Footer />
+      <ToastContainer />
     </div>
   );
 }

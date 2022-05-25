@@ -28,11 +28,7 @@
     font-size: 19px;
     color: rgb(229, 226, 226);
 }
-@media screen and (max-width:1000px) {
-    .header img{
-        display: none;
-    }
-}
+
 .discription{
     display: flex;
     align-items: center;
@@ -93,6 +89,34 @@
 }
 .order{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+.order1{
+   width: 60%;
+   margin-bottom: 0px;
+}
+.order img{
+    width: 70%;
+}
+.orderContainer, .dashboard{
+    background-image: url('../../image/footer.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width:1000px) {
+    .header img{
+        display: none;
+    }
+    .order{
+        display: block;
+    }
+    .order img{
+        width: 100%;
+    }
+    .order1{
+        width: 100%;
+        margin-bottom: 70px;
+     }
 }

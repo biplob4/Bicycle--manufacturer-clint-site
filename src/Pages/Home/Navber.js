@@ -28,9 +28,9 @@ const Navber = () => {
 
                             <Nav className="ms-auto">
                                 {!user ?
-                                    <Link state={{ textDecoration: "none" }} to='/login'><small style={{ fontSize: "16px" }} className=' bg-[#3085E4] text-[#fff] px-3 py-2 rounded cursor-pointer'>Login/Signin</small></Link>
+                                    <Link state={{ textDecoration: "none" }} to='/login'><small style={{ fontSize: "16px" }} className=' bg-[#3085E4] text-[#fff] px-3 py-2 rounded cursor-pointer nav-item text-light nav-link mx-1 px-3 '>Login/Signin</small></Link>
                                     :
-                                    <a onClick={()=> signOut(auth)} href=""><small style={{ fontSize: "16px" }} className=' bg-[#3085E4] text-[#fff] px-3 py-2 rounded cursor-pointer'>Logout</small></a>
+                                    <a onClick={()=> signOut(auth)} href=""><small style={{ fontSize: "16px" }} className=' bg-[#3085E4] text-[#fff] px-3 py-2 rounded cursor-pointer nav-item text-light nav-link mx-1 px-3 '>Logout</small></a>
                                 }
                             </Nav>
 

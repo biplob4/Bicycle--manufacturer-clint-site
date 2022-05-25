@@ -25,8 +25,7 @@ const Login = () => {
     const [token] = useToken(user);
 
     if (token) {
-        // navigate(from, { replace: true });
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     if(loading){
         lode = <Loading/>
