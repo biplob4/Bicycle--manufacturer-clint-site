@@ -60,7 +60,7 @@ const MyItem = () => {
         <div className='container mb-5 mt-3 items userProducts'>
             {
                 item.map(product => (
-                    <div key={product._id} className="product align-middle justify-content-between ">
+                    <div key={product._id} className="product align-middle justify-content-between py-1">
                             <img className=' w-[80px] rounded mx-auto' src={product.image} alt="images" />
                         <div className="w-100 px-2 mt-1 mx-auto">
                             <div className='text-orange-500 trnangectionId text-center w-100 mx-auto'>
@@ -68,7 +68,7 @@ const MyItem = () => {
                             </div>
                             <div className="d-flex align-middle justify-content-between">
                                 <p> <b className='cardP'>{product.name}</b></p>
-                                <p className='cardP '>Quantity: {product.quantity}</p>
+                                <p className='cardP text-xs me-2'>Quantity: {product.quantity}</p>
                             </div>
                             <hr className='mb-2 mt-0' />
                             <div className="d-flex align-middle justify-content-between">
@@ -76,7 +76,7 @@ const MyItem = () => {
                                 <div className=" d-flex">
                                     {!product.paid ?
                                         <p onClick={() => navigate(`/payment/${product._id}`)} className='rounded py-1 px-2 text-light bg-success me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faAlipay} /> Pay</p> :
-                                        <p className='rounded py-1 px-3 text-success border me-2 text-xs' role="button"> Paid</p>
+                                        <p className='rounded py-1 px-3 text-success border paidBtn me-2 text-xs'> Paid</p>
                                     }
                                     {!product.paid && <p onClick={() => handelDelete(product._id)} className='rounded py-1 px-2 text-light bg-danger me-2 cursor-pointer text-xs' role="button"> <FontAwesomeIcon className='orderIcon' icon={faTrash} /> Delete</p>}
                                 </div>

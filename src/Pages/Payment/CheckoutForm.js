@@ -70,7 +70,7 @@ const CheckoutForm = ({ parts }) => {
             setProcessing(false);
             // store payment on database
             const payment = {
-                appointment: _id,
+                order: _id,
                 trnangectionId: paymentIntent.id
             };
             setTransgactionId(paymentIntent.id);

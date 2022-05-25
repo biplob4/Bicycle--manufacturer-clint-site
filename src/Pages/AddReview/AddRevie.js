@@ -33,7 +33,7 @@ const AddRevie = () => {
 
     return (
         <div className='min-h-[80vh] '>
-            <h6 className='text-info text-center pb-0 mt-4'>Please Add a Review</h6 >
+            <h6 className='text-center pb-0 mt-4'>Please Add a Review</h6 >
             <div class="mb-5 mt-4">
                 <div class="w-full max-w-xl mx-auto">
                     <div class="mx-auto">
