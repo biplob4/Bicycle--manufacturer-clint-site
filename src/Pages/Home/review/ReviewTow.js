@@ -27,7 +27,7 @@ const ReviewTow = ({ reviews }) => {
     return (
         <div className="review-container">
             <div className='mb-5'>
-                <img src={avatar} alt="img" />
+                <img className='rounded-xl' src={avatar} alt="img" />
                 <h5 className='text-sm'>{username}</h5>
                 <p className='font-bold font-xl'>{comment}</p>
                 <div className="review">

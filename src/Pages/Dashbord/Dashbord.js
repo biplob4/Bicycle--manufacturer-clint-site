@@ -16,12 +16,15 @@ const Dashbord = () => {
                     <ul style={{ borderBottom: '1px solid lightgray' }} class=" menu lg:menu-horizontal p-0 block hover-none ">
                         <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard" aria-checked>My Order</CustomLink></li>
                         <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/addReview">Add reviews</CustomLink></li>
-                        <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/Profile">My Profile</CustomLink></li>
+
                         {admin && <>
                             <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/addProduct">Add Product</CustomLink></li>
-                            <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/manageOrder">Manage All Order</CustomLink></li>
+                            <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/manageProduct">Manage Product</CustomLink></li>
                             <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/makeAdmin">Make Admin</CustomLink></li>
+                            <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/manageOrder">Manage All Order</CustomLink></li>
                         </>}
+
+                        <li><CustomLink style={{ textDecoration: "none" }} className="text-sm text-[#6C757D]" to="/dashboard/profile">My Profile</CustomLink></li>
                     </ul>
                 </div>
                 <Outlet></Outlet>

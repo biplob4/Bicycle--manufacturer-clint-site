@@ -50,7 +50,7 @@ const MakeAdmin = () => {
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
-                        <tr>
+                        <tr className='text-light bg-success'>
                             <th></th>
                             <th>email</th>
                             <th>make user</th>
