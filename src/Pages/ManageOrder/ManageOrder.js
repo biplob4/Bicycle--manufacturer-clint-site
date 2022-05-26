@@ -10,7 +10,7 @@ import Loading from '../Shared/Loadding/Loading';
 
 
 const ManageOrder = () => {
-    const { data: item, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/orderAll', {
+    const { data: item, isLoading, refetch } = useQuery('users', () => fetch('https://bicysel-server.herokuapp.com/orderAll', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -22,7 +22,7 @@ const ManageOrder = () => {
     }
 
     const handelDelete = id => {
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `https://bicysel-server.herokuapp.com/order/${id}`;
         fetch(url, {
             method: "DELETE"
         })
@@ -36,7 +36,7 @@ const ManageOrder = () => {
     }
 
     // const hendleShipped = id => {
-    //     fetch(`http://localhost:5000/orderAll/${id}`, {
+    //     fetch(`https://bicysel-server.herokuapp.com/orderAll/${id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json'

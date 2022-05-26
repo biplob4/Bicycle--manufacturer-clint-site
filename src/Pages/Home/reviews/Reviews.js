@@ -5,11 +5,11 @@ import './Reviews.css'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
-    useEffect(()=>{
-        fetch('http://localhost:5000/review')
-        .then(res=>res.json())
-        .then(data=>setReviews(data))
-    },[])
+    useEffect(() => {
+        fetch('https://bicysel-server.herokuapp.com/review')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
     return (
         <div className='container-xl my-5 py-5' id='reiews'>
             <h2 className='text-center text-success'>Our Amazing Result</h2>

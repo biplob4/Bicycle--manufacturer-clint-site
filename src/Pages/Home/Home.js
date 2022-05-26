@@ -5,6 +5,7 @@ import Description from './Description';
 import Tolse from './Tolse';
 import Contuct from './Contuct';
 import Reviews from './reviews/Reviews';
+import Boston from './Boston';
 
 const Home = () => {
     return (
@@ -25,6 +26,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Boston/>
             <Description />
             <Tolse />
             <Reviews />

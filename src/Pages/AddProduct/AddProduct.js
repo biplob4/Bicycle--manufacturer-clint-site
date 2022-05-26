@@ -9,7 +9,7 @@ const AddProduct = () => {
     const [loading, setLoadding] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    
+
     const handleAdding = event => {
         event.preventDefault();
         setLoadding(true);
@@ -34,7 +34,7 @@ const AddProduct = () => {
                     const img = result.data.url;
                     product.image = img;
                     //  send your data to yout database
-                    fetch('http://localhost:5000/addParts', {
+                    fetch('https://bicysel-server.herokuapp.com/addParts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -69,8 +69,9 @@ const AddProduct = () => {
                             <input type="number" name="mexQuantity" className="input input-bordered w-full mb-3 d-block" placeholder='Mex Quantity' />
                             <input type="number" name="minQuantity" className="input input-bordered w-full mb-3 d-block" placeholder='Min Quantity' />
                             <input type="number" name="price" className="input input-bordered w-full mb-3 d-block" placeholder='Price' />
-                            <input type="file" onChange={(event) => { setSelectedImage(event.target.files[0])
-        }} name="image" className="input input-bordered w-full mb-3 d-block" placeholder='Product Image' />
+                            <input type="file" onChange={(event) => {
+                                setSelectedImage(event.target.files[0])
+                            }} name="image" className="input input-bordered w-full mb-3 d-block" placeholder='Product Image' />
                             <textarea type="text" name="description" className="input input-bordered w-full min-h-[15vh] mb-3 d-block border" placeholder='Product Descpiption' />
                             <Button className='d-block mx-auto' type="submit">Add Review</Button>
                         </form >

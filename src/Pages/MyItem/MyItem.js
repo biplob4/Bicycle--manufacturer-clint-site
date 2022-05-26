@@ -18,7 +18,7 @@ const MyItem = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?user=${user.email}`, {
+            fetch(`https://bicysel-server.herokuapp.com/order?user=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -39,7 +39,7 @@ const MyItem = () => {
     }, [user])
 
     const handelDelete = id => {
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `https://bicysel-server.herokuapp.com/order/${id}`;
         const agrre = window.confirm('are you sure');
         if (agrre) {
             fetch(url, {
@@ -61,10 +61,10 @@ const MyItem = () => {
             {
                 item.map(product => (
                     <div key={product._id} className="product align-middle justify-content-between py-1">
-                            <img className=' w-[80px] rounded mx-auto' src={product.image} alt="images" />
+                        <img className=' w-[80px] rounded mx-auto' src={product.image} alt="images" />
                         <div className="w-100 px-2 mt-1 mx-auto">
                             <div className='text-orange-500 trnangectionId text-center w-100 mx-auto'>
-                            {product.trnangectionId && <span ><span className='text-[gray]'>your trnangection id:</span>  {product.trnangectionId}</span>}
+                                {product.trnangectionId && <span ><span className='text-[gray]'>your trnangection id:</span>  {product.trnangectionId}</span>}
                             </div>
                             <div className="d-flex align-middle justify-content-between orderP">
                                 <p> <b className='cardP'>{product.name}</b></p>

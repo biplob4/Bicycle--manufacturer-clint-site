@@ -7,7 +7,7 @@ import Loading from '../Shared/Loadding/Loading';
 
 const MakeAdmin = () => {
 
-    const { data: user, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
+    const { data: user, isLoading, refetch } = useQuery('users', () => fetch('https://bicysel-server.herokuapp.com/users', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,29 +20,29 @@ const MakeAdmin = () => {
 
 
     const handelDelete = id => {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://bicysel-server.herokuapp.com/users/${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         }).then(res => res.json())
-        .then(data=>{
-            toast.success('Successfully Delete User');
-            refetch();
-        })
+            .then(data => {
+                toast.success('Successfully Delete User');
+                refetch();
+            })
     }
 
     const handelMakeAdmin = email => {
-        fetch(`http://localhost:5000/admin/${email}`, {
+        fetch(`https://bicysel-server.herokuapp.com/admin/${email}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         }).then(res => res.json())
-        .then(data=>{
-            toast.success('Successfully Made An Admin');
-            refetch();
-        })
+            .then(data => {
+                toast.success('Successfully Made An Admin');
+                refetch();
+            })
     }
 
     return (

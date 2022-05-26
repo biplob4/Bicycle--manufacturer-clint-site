@@ -12,10 +12,10 @@ const stripePromise = loadStripe('pk_test_51L0tOqAO38zOuUv0XugrKf0tPfBx7WstDw4sw
 
 
 const Payment = () => {
-    const [user,loading] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const { id } = useParams();
 
-    const { data: parts, isLoading } = useQuery(['parts', id], () => fetch(`http://localhost:5000/order/${id}`, {
+    const { data: parts, isLoading } = useQuery(['parts', id], () => fetch(`https://bicysel-server.herokuapp.com/order/${id}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

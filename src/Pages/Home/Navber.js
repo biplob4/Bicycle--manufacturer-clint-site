@@ -25,7 +25,7 @@ const Navber = () => {
                                 <CustomLink className="nav-item nav-link mx-1 px-3 " to="/blogs">Blogs</CustomLink>
                                 <CustomLink className="nav-item nav-link mx-1 px-3 " to="/dashboard">Dashboard</CustomLink>
                                 <CustomLink className="nav-item nav-link mx-1 px-3 " to="/protfolio">My Protfolio</CustomLink>
-                                <a className="nav-item nav-link mx-1 px-3 " href="#description">About Us</a>
+                                <a style={{cursor:'no-drop'}} className="nav-item nav-link mx-1 px-3 " href="#description">About Us</a>
                             </Nav>
 
                             <Nav className="ms-auto">

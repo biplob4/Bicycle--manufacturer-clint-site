@@ -18,7 +18,7 @@ const AddRevie = () => {
             review: event.target.ratting.value
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://bicysel-server.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -28,7 +28,7 @@ const AddRevie = () => {
         })
             .then(res => res.json())
             .then(data => toast.success('Thanks For Giveing A Reviwe'))
-            event.target.reset();
+        event.target.reset();
     }
 
     return (
@@ -37,7 +37,7 @@ const AddRevie = () => {
             <div class="mb-5 mt-4">
                 <div class="w-full max-w-xl mx-auto">
                     <div class="mx-auto">
-                        {loading && <Loading/>}
+                        {loading && <Loading />}
                         < form onSubmit={handleBooking} className='bg-[#FFFFFF] w-100' >
                             <input type="text" name="name" disabled value={user?.displayName || ''} className="input input-bordered w-full mb-3 d-block" required />
                             <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full mb-3 d-block" required />

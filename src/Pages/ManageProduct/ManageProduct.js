@@ -7,7 +7,7 @@ import Loading from '../Shared/Loadding/Loading';
 
 const ManageProduct = () => {
     const { data: parts, isLoading, refetch } = useQuery('parts', () =>
-        fetch('http://localhost:5000/parts').then(res =>
+        fetch('https://bicysel-server.herokuapp.com/parts').then(res =>
             res.json()
         ))
 
@@ -17,7 +17,7 @@ const ManageProduct = () => {
 
 
     const handelDelete = id => {
-        fetch(`http://localhost:5000/parts/${id}`, {
+        fetch(`https://bicysel-server.herokuapp.com/parts/${id}`, {
             method: "DELETE",
             headers: {
                 'content-type': 'application/json',

@@ -13,7 +13,7 @@ const Purchase = () => {
     const { id } = useParams();
     const navegate = useNavigate();
 
-    const { data: parts, isLoading } = useQuery(['parts', id], () => fetch(`http://localhost:5000/parts/${id}`, {
+    const { data: parts, isLoading } = useQuery(['parts', id], () => fetch(`https://bicysel-server.herokuapp.com/parts/${id}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -58,7 +58,7 @@ const Purchase = () => {
             phone: event.target.phone.value
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://bicysel-server.herokuapp.com/order', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -76,7 +76,7 @@ const Purchase = () => {
                 }
                 navegate('/dashboard')
             })
-            event.target.reset();
+        event.target.reset();
     }
 
     return (

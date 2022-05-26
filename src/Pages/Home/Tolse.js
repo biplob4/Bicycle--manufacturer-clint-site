@@ -7,14 +7,14 @@ import './Tolse.css';
 
 const Tolse = () => {
     const { data: parts, isLoading } = useQuery('parts', () =>
-        fetch('http://localhost:5000/parts').then(res =>
+        fetch('https://bicysel-server.herokuapp.com/parts').then(res =>
             res.json()
         ))
 
     if (isLoading) {
-        return <Loading/>
+        return <Loading />
     }
-    if(!parts){
+    if (!parts) {
         return <h4 className='text-center text-[red]'>Product Not Found</h4>
     }
     return (
@@ -25,8 +25,8 @@ const Tolse = () => {
             </div>
             <div className="sengleTolse container py-5">
                 {
-                    parts?.map(tolse =>
-                        <Tole key={tolse._id} tolse={tolse}/>
+                    parts?.slice(0,6).map(tolse =>
+                        <Tole key={tolse._id} tolse={tolse} />
                     )
                 }
             </div>
